@@ -4,8 +4,6 @@ use LdapDn\Dn;
 use LdapDn\Rdn;
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\assertEquals;
-
 class LdapDnTest extends TestCase
 {
     private $rdnStrings = [
@@ -79,7 +77,7 @@ class LdapDnTest extends TestCase
     public function testDnIterator(Dn $dn)
     {
         foreach ($dn as $index => $rdn) {
-            assertEquals($this->rdnStrings[$index], (string)$rdn);
+            $this->assertEquals($this->rdnStrings[$index], (string)$rdn);
         }
     }
 
@@ -473,8 +471,8 @@ class LdapDnTest extends TestCase
         ];
 
         foreach($rdn as $i => $attribute) {
-            assertEquals($attributes[$i]['name'], $attribute->getName());
-            assertEquals($attributes[$i]['value'], $attribute->getValue());
+            $this->assertEquals($attributes[$i]['name'], $attribute->getName());
+            $this->assertEquals($attributes[$i]['value'], $attribute->getValue());
         }
     }
 }
