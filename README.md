@@ -20,6 +20,7 @@ LDAP Distinguished Name parsing and manipulation library for PHP.
   * [Manipulating DNs](#manipulating-dns)
     * [Remove a fragment of a DN](#remove-a-fragment-of-a-dn)
   * [Constructing DNs](#constructing-dns)
+  * [Exceptions](#exceptions)
 
 ## Features
 
