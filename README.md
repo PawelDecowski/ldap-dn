@@ -2,6 +2,25 @@
 
 LDAP Distinguished Name parsing and manipulation library for PHP.
 
+## Table of contents
+
+* [Features](#features)
+* [Installation](#installation)
+* [How to use](#how-to-use)
+  * [Parsing DNs and accessing their components](#parsing-dns-and-accessing-their-components)
+    * [Create a DN object from a string](#create-a-dn-object-from-a-string)
+    * [Back to string representation](#back-to-string-representation)
+    * [Access RDNs by index](#access-rdns-by-index)
+    * [Iterate RDNs](#iterate-rdns)
+    * [Access attributes](#access-attributes)
+    * [Multivalued RDNs](#multivalued-rdns)
+    * [Special characters](#special-characters)
+    * [Filter by attribute name](#filter-by-attribute-name)
+    * [Get the parent DN](#get-the-parent-dn)
+  * [Manipulating DNs](#manipulating-dns)
+    * [Remove a fragment of a DN](#remove-a-fragment-of-a-dn)
+  * [Constructing DNs](#constructing-dns)
+
 ## Features
 
 * access individual RDNs by index
@@ -146,7 +165,7 @@ echo $dn->filter('ou'); // 'ou=it,ou=leadership'
 Note that even though the result of `filter()` is a `Dn` object, it may not be a valid Distinguished Name (for example if you remove the root RDN).
 This library doesn’t have the knowledge of your LDAP structure, so it can’t ensure validity.
 
-#### Get the parent Dn
+#### Get the parent DN
 
 ```php
 $dn = LdapDn\Dn::fromString('cn=john.doe,ou=it,ou=leadership,dc=example,dc=org');
@@ -155,7 +174,7 @@ echo $dn->getParent(); // 'ou=it,ou=leadership,dc=example,dc=org'
 echo $dn->getParent()->getParent(); // 'ou=leadership,dc=example,dc=org'
 ```
 
-### Manipulating Dns
+### Manipulating DNs
 
 `Dn`, `Rdn` and `Attribute` are immutable so all manipulation functions return a new object.
 
@@ -170,7 +189,7 @@ $fragmentToRemove = LdapDn\Dn::fromString('dc=example,dc=org');
 echo $dn->withRemoved($fragmentToRemove); // 'cn=john.doe,ou=it,ou=leadership'
 ```
 
-### Constructing Dns
+### Constructing DNs
 
 While the main purpose of the library is parsing Dns, you can also construct them.
 
