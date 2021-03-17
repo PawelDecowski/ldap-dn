@@ -191,7 +191,7 @@ echo $dn->withRemoved($fragmentToRemove); // 'cn=john.doe,ou=it,ou=leadership'
 
 ### Constructing DNs
 
-While the main purpose of the library is parsing Dns, you can also construct them.
+While the main purpose of the library is parsing DNs, you can also construct them.
 
 ```php
 use LdapDn\Dn;
@@ -209,7 +209,7 @@ $dn = new Dn([
 echo $dn; // 'cn=doe\, john+uid=123,ou=it,ou=leadership,dc=example,dc=org'
 ```
 
-Most Rdns contain a single attribute, so you can construct them with a shortcut.
+Most RDNs contain a single attribute, so you can construct them with a shorthand syntax.
 
 ```php
 use LdapDn\Dn;
