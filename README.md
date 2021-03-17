@@ -5,6 +5,7 @@ LDAP Distinguished Name parsing and manipulation library for PHP.
 ## Table of contents
 
 * [Features](#features)
+* [Requirements](#requirements)
 * [Installation](#installation)
 * [How to use](#how-to-use)
   * [Parsing DNs and accessing their components](#parsing-dns-and-accessing-their-components)
@@ -31,6 +32,10 @@ LDAP Distinguished Name parsing and manipulation library for PHP.
 * remove fragments of a DN
 * construct DNs
 * case-insensitive but case-preserving (lookups are case-insensitive but attribute names’ and values’ case is preserved)
+
+## Requirements
+
+* PHP 7.1
 
 ## Installation
 
