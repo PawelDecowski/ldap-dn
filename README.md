@@ -2,6 +2,11 @@
 
 LDAP Distinguished Name parsing and manipulation library for PHP.
 
+![Packagist Version](https://img.shields.io/packagist/v/paweldecowski/ldap-dn)
+![Travis (.com)](https://img.shields.io/travis/com/PawelDecowski/ldap-dn)
+![Coveralls](https://img.shields.io/coveralls/github/PawelDecowski/ldap-dn)
+![GitHub](https://img.shields.io/github/license/PawelDecowski/ldap-dn)
+
 ## Table of contents
 
 * [Features](#features)
