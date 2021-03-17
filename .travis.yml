@@ -18,4 +18,4 @@ script:
   - php vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 after_success:
-  - travis_retry php vendor/bin/php-coveralls -v
+  - travis_retry php vendor/bin/php-coveralls -v --exclude-no-stmt
