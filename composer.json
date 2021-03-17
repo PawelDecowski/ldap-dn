@@ -1,6 +1,13 @@
 {
     "name": "paweldecowski/ldap-dn",
     "description": "Parse and manipulate LDAP Distinguished Names",
+    "keywords": [
+        "ldap",
+        "dn",
+        "rdn",
+        "distinguished name",
+        "parser"
+    ],
     "type": "library",
     "require": {
         "php": ">=7.1"
