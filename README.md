@@ -32,6 +32,7 @@ LDAP Distinguished Name parsing and manipulation library for PHP.
 * remove fragments of a DN
 * construct DNs
 * case-insensitive but case-preserving (lookups are case-insensitive but attribute names’ and values’ case is preserved)
+* 100% test coverage
 
 ## Installation
 
